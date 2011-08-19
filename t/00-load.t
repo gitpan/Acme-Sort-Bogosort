@@ -6,15 +6,15 @@ use List::Util qw/shuffle/;
 use v5.10;
 
 BEGIN {
-    use_ok( 'ACME::Sort::Bogosort' ) || print "Bail out!\n";
+    use_ok( 'Acme::Sort::Bogosort' ) || print "Bail out!\n";
 }
 
-diag( "Testing ACME::Sort::Bogosort $ACME::Sort::Bogosort::VERSION, Perl $], $^X" );
+diag( "Testing Acme::Sort::Bogosort $Acme::Sort::Bogosort::VERSION, Perl $], $^X" );
 
-can_ok( 'ACME::Sort::Bogosort', qw/bogosort is_ordered compare/ );
+can_ok( 'Acme::Sort::Bogosort', qw/bogosort is_ordered compare/ );
 
 
-note ( "Testing ACME::Sort::Bogosort::compare()" );
+note ( "Testing Acme::Sort::Bogosort::compare()" );
 my %comparisons = (
     descending  => [ 'B', 'A',  1, "compare( qw/B A/ ) ==  1" ],
     ascending   => [ 'A', 'B', -1, "compare( qw/A B/ ) == -1" ],
@@ -22,7 +22,7 @@ my %comparisons = (
 );
 foreach my $comp ( keys %comparisons ) {
     is( 
-        ACME::Sort::Bogosort::compare( 
+        Acme::Sort::Bogosort::compare( 
             $comparisons{$comp}[0], 
             $comparisons{$comp}[1] 
         ),
@@ -33,7 +33,7 @@ foreach my $comp ( keys %comparisons ) {
 
 my $caught;
 try {
-    ACME::Sort::Bogosort::compare( 'A' );
+    Acme::Sort::Bogosort::compare( 'A' );
 } catch {
     $caught = $_;
 };
@@ -45,23 +45,23 @@ like(
 );
 
 
-note( "Testing ACME::Sort::Bogosort::is_ordered() -- Default ascending order." );
-my $compare = \&ACME::Sort::Bogosort::compare;
+note( "Testing Acme::Sort::Bogosort::is_ordered() -- Default ascending order." );
+my $compare = \&Acme::Sort::Bogosort::compare;
 is( 
-    ACME::Sort::Bogosort::is_ordered( $compare, [ qw/ A B C D E / ] ), 
+    Acme::Sort::Bogosort::is_ordered( $compare, [ qw/ A B C D E / ] ), 
     1, 
     "is_ordered( \&compare, [ qw/ A B C D E / ] ) returns true." 
 );
 
 isnt(
-    ACME::Sort::Bogosort::is_ordered( $compare, [ qw/ E D C B A / ] ),
+    Acme::Sort::Bogosort::is_ordered( $compare, [ qw/ E D C B A / ] ),
     1,
     "is_ordered( \&compare, [ qw/ E D C B A / ] ) returns false."
 );
 
 undef $caught;
 try {
-    ACME::Sort::Bogosort::is_ordered( [ qw/ A B C D E / ] );
+    Acme::Sort::Bogosort::is_ordered( [ qw/ A B C D E / ] );
 } catch { $caught = $_ };
 like( 
     $caught, 
@@ -71,7 +71,7 @@ like(
 
 undef $caught;
 try {
-    ACME::Sort::Bogosort::is_ordered( $compare, qw/ A B C D E / );
+    Acme::Sort::Bogosort::is_ordered( $compare, qw/ A B C D E / );
 } catch { $caught = $_ };
 like(
     $caught,
@@ -79,7 +79,7 @@ like(
     "is_ordered() throws an exception when not handed an arrayref as second param."
 );
 
-note "Testing ACME::Sort::Bogosort::bogosort().";
+note "Testing Acme::Sort::Bogosort::bogosort().";
 my @unsorted = shuffle( 'A' .. 'E' );
 my @sorted = bogosort( @unsorted );
 is_deeply( 

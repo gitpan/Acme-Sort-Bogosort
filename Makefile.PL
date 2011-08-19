@@ -4,10 +4,10 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME                => 'ACME::Sort::Bogosort',
+    NAME                => 'Acme::Sort::Bogosort',
     AUTHOR              => q{David Oswald <davido[at]cpan.org>},
-    VERSION_FROM        => 'lib/ACME/Sort/Bogosort.pm',
-    ABSTRACT_FROM       => 'lib/ACME/Sort/Bogosort.pm',
+    VERSION_FROM        => 'lib/Acme/Sort/Bogosort.pm',
+    ABSTRACT_FROM       => 'lib/Acme/Sort/Bogosort.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
       ? ('LICENSE'=> 'perl')
       : ()),
@@ -16,5 +16,5 @@ WriteMakefile(
         'Test::More' => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'ACME-Sort-Bogosort-*' },
+    clean               => { FILES => 'Acme-Sort-Bogosort-*' },
 );

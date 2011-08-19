@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "ACME-Sort-Bogosort",
+   "name" : "Acme-Sort-Bogosort",
    "no_index" : {
       "directory" : [
          "t",
@@ -37,5 +37,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }

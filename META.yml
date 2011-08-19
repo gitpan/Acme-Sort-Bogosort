@@ -12,11 +12,11 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: ACME-Sort-Bogosort
+name: Acme-Sort-Bogosort
 no_index:
   directory:
     - t
     - inc
 requires:
   Test::More: 0
-version: 0.01
+version: 0.02

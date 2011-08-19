@@ -1,4 +1,4 @@
-package ACME::Sort::Bogosort;
+package Acme::Sort::Bogosort;
 
 use v5.10;
 
@@ -12,7 +12,7 @@ use List::Util qw/shuffle/;
 
 our @EXPORT = qw/bogosort/;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 
@@ -67,7 +67,7 @@ sub compare {
 
 =head1 NAME
 
-ACME::Sort::Bogosort - Implementation of a Bogosort (aka 'stupid sort' or 'slowsort').
+Acme::Sort::Bogosort - Implementation of a Bogosort (aka 'stupid sort' or 'slowsort').
 
 =head1 VERSION
 
@@ -79,9 +79,9 @@ The Bogosort is a sort that is based on the "generate and test" paradigm.  It wo
 first testing whether the input is in sorted order.  If so, return the list.  But if not, 
 randomly shuffle the input and test again.  Repeat until the shuffle comes back sorted.
 
-    use ACME::Sort::Bogosort;
+    use Acme::Sort::Bogosort;
 
-    my @unsorted = qw/ E B A C D /
+    my @unsorted = qw/ E B A C D /;
     my @ascending = bogosort( @unsorted );
     
     my @descending = bogosort(
@@ -161,7 +161,7 @@ David Oswald, C<< <davido[at]cpan.org> >>
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-acme-sort-bogosort at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ACME-Sort-Bogosort>.  I will be notified, and then you'll
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Acme-Sort-Bogosort>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
 
@@ -171,7 +171,7 @@ automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc ACME::Sort::Bogosort
+    perldoc Acme::Sort::Bogosort
 
 
 You can also look for information at:
@@ -180,19 +180,19 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=ACME-Sort-Bogosort>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Acme-Sort-Bogosort>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/ACME-Sort-Bogosort>
+L<http://annocpan.org/dist/Acme-Sort-Bogosort>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/ACME-Sort-Bogosort>
+L<http://cpanratings.perl.org/d/Acme-Sort-Bogosort>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/ACME-Sort-Bogosort/>
+L<http://search.cpan.org/dist/Acme-Sort-Bogosort/>
 
 =back
 
@@ -214,4 +214,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of ACME::Sort::Bogosort
+1; # End of Acme::Sort::Bogosort

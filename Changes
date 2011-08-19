@@ -1,5 +1,7 @@
-Revision history for ACME-Sort-Bogosort
+Revision history for Acme-Sort-Bogosort
 
 0.01    Date/time
         First version, released on an unsuspecting world.
-
+0.02    Date/time
+        Fixed a typo in the POD synopsis.
+        Changed from ACME:: to Acme::
