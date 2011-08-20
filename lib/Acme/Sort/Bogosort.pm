@@ -12,7 +12,7 @@ use List::Util qw/shuffle/;
 
 our @EXPORT = qw/bogosort/;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 
