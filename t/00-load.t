@@ -3,7 +3,7 @@
 use Test::More tests => 12;
 use Try::Tiny;
 use List::Util qw/shuffle/;
-use v5.10;
+use 5.010;
 
 BEGIN {
     use_ok( 'Acme::Sort::Bogosort' ) || print "Bail out!\n";

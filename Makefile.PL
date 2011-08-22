@@ -15,6 +15,7 @@ WriteMakefile(
     PREREQ_PM => {
         'Try::Tiny'  => 0,
         'Test::More' => 0,
+        'parent'     => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Acme-Sort-Bogosort-*' },
